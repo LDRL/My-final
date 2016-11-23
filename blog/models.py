@@ -34,8 +34,6 @@ class Compra(models.Model):
     persona = models.ForeignKey(Persona,on_delete=models.CASCADE,)
     productos = models.ManyToManyField(Producto, through='CD')
 
-    def __str__(self):
-        return self.persona
 
 
 

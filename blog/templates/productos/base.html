@@ -1,0 +1,39 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Django Producto</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+         <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
+    </head>
+    <div class="page-header">
+
+              {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+
+
+            <h1><a href="">Venta Producto</a></h1>
+
+        </div>
+        <div class="content container">
+
+                <div class="row">
+                    <div class="col-md-8">
+                    {%block content %}
+                    {% endblock %}
+                    </div>
+                </div>
+
+        </div>
+
+
+    </body>
+</html>
